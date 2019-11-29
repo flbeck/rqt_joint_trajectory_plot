@@ -118,7 +118,7 @@ class MainWidget(QWidget):
             self.eff[joint_name] = np.array([0.0] * len(msg.points))
         for i in range(len(msg.points)):
             point = msg.points[i]
-            self.time[i] = point.time_from_start.to_sec()
+            self.time[i] = point.time_from_start.to_sec() + msg.header.seq
             for j in range(len(msg.joint_names)):
                 joint_name = msg.joint_names[j]
                 if point.positions:

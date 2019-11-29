@@ -37,7 +37,7 @@ class PlotWidget(QWidget):
         self.setLayout(vbox)
 
     def draw_curves(self, curve_names, data):
-        self.canvas.axes.clear()
+        #self.canvas.axes.clear()
         self.canvas.axes.grid(True, color='gray')
         for name in curve_names:
             xdata, ydata = data[name]
