@@ -47,4 +47,4 @@ class PlotWidget(QWidget):
 
     def update_legend(self):
         handles, labels = self.canvas.axes.get_legend_handles_labels()
-        self.canvas.axes.legend(handles, labels, loc='upper left')
+        self.canvas.axes.legend(handles, labels, loc='upper right')
